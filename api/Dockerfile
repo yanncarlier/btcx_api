@@ -1,5 +1,5 @@
 # Build stage
-FROM rust:1.81 AS builder
+FROM rust:1.88-bookworm AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -17,10 +17,10 @@ FROM debian:bookworm-slim
 WORKDIR /app
 
 # Copy the compiled binary from the builder stage
-COPY --from=builder /app/target/release/bitcoin_tx_api /app/bitcoin_tx_api
+COPY --from=builder /app/target/release/btcx_api /app/btcx_api
 
 # Expose port 8080
 EXPOSE 8080
 
 # Run the binary
-CMD ["/app/bitcoin_tx_api"]
+CMD ["/app/btcx_api"]

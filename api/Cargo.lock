@@ -244,7 +244,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "90064b8dee6815a6470d60bad07bbbaee885c0e12d04177138fa3291a01b7bc4"
 
 [[package]]
-name = "bitcoin_tx_api"
+name = "btcx_api"
 version = "0.1.0"
 dependencies = [
  "actix-web",

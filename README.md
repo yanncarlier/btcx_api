@@ -36,7 +36,7 @@ Or build the binary and run it separately:
 cargo build --release
 
 # Run the binary
-./target/release/bitcoin_tx_api
+./target/release/btcx_api
 ```
 
 The server will start and listen on `http://localhost:8080` (or `0.0.0.0:8080` for external access).
@@ -134,13 +134,13 @@ curl -X POST http://localhost:8080/create_tx \
 ### Build the Docker Image
 
 ```bash
-docker build -t bitcoin_tx_api -f api/Dockerfile api/
+docker build -t btcx_api -f api/Dockerfile api/
 ```
 
 ### Run the Container
 
 ```bash
-docker run -p 8080:8080 bitcoin_tx_api
+docker run -p 8080:8080 btcx_api
 ```
 
 ## Fly.io Deployment
