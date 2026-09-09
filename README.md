@@ -86,7 +86,22 @@ The server will start and listen on `http://localhost:8080` (or `0.0.0.0:8080` f
 ### Example Request
 
 ```
-Online use: https://btcx-tools-api.fly.dev
+curl -X POST https://btcx-api.fly.dev/create_tx \
+  -H "Content-Type: application/json" \
+  -d '{
+    "inputs": [
+      {
+        "txid": "5df6e0e2761359d30a8275058e2678ab78211f49fdf87c8ac664586000000000",
+        "vout": 0
+      }
+    ],
+    "outputs": [
+      {
+        "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+        "amount": 100000
+      }
+    ]
+  }'
 ```
 
 
@@ -151,11 +166,19 @@ docker run -p 8080:8080 btcx_api
 
 ## Fly.io Deployment
 
-Deploy to Fly.io using the provided `fly.toml` configuration:
+### Install Fly.io CLI
 
 ```bash
-fly launch
-fly deploy
+curl -L https://fly.io/install.sh | sh
+flyctl auth login
+```
+
+### Deploy to Fly.io
+
+Deploy using the provided `fly.toml` configuration:
+
+```bash
+flyctl deploy
 ```
 
 ## Project Structure
