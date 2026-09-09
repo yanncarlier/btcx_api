@@ -85,6 +85,12 @@ The server will start and listen on `http://localhost:8080` (or `0.0.0.0:8080` f
 
 ### Example Request
 
+```
+Online use: https://btcx-tools-api.fly.dev
+```
+
+
+
 ```bash
 curl -X POST http://localhost:8080/create_tx \
   -H "Content-Type: application/json" \
