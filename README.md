@@ -9,7 +9,7 @@ A simple HTTP API server for creating unsigned Bitcoin transactions.
 - Endpoint: POST `/create_tx` to create unsigned Bitcoin transactions
 - Accepts inputs (txid, vout) and outputs (address, amount)
 - Returns hex-encoded transaction
-- Binds to `0.0.0.0:8080` by default
+- Binds to `0.0.0.0:8081` by default
 - Supports Bitcoin mainnet
 
 ## Installation
@@ -39,7 +39,7 @@ cargo build --release
 ./target/release/btcx_api
 ```
 
-The server will start and listen on `http://localhost:8080` (or `0.0.0.0:8080` for external access).
+The server will start and listen on `http://localhost:8081` (or `0.0.0.0:8081` for external access).
 
 ## Usage
 
@@ -107,7 +107,7 @@ curl -X POST https://btcx-api.fly.dev/create_tx \
 
 
 ```bash
-curl -X POST http://localhost:8080/create_tx \
+curl -X POST http://localhost:8081/create_tx \
   -H "Content-Type: application/json" \
   -d '{
     "inputs": [
@@ -136,7 +136,7 @@ curl -X POST http://localhost:8080/create_tx \
 ### Test with Multiple Inputs and Outputs
 
 ```bash
-curl -X POST http://localhost:8080/create_tx \
+curl -X POST http://localhost:8081/create_tx \
   -H "Content-Type: application/json" \
   -d '{
     "inputs": [
@@ -161,7 +161,7 @@ docker build -t btcx_api -f api/Dockerfile api/
 ### Run the Container
 
 ```bash
-docker run -p 8080:8080 btcx_api
+docker run -p 8081:8081 btcx_api
 ```
 
 ## Fly.io Deployment

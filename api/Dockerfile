@@ -19,8 +19,8 @@ WORKDIR /app
 # Copy the compiled binary from the builder stage
 COPY --from=builder /app/target/release/btcx_api /app/btcx_api
 
-# Expose port 8080
-EXPOSE 8080
+# Expose port 8081
+EXPOSE 8081
 
 # Run the binary
 CMD ["/app/btcx_api"]

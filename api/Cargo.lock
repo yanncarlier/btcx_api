@@ -244,16 +244,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "90064b8dee6815a6470d60bad07bbbaee885c0e12d04177138fa3291a01b7bc4"
 
 [[package]]
-name = "btcx_api"
-version = "0.1.0"
-dependencies = [
- "actix-web",
- "bitcoin",
- "hex",
- "serde",
-]
-
-[[package]]
 name = "bitflags"
 version = "2.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -287,6 +277,16 @@ checksum = "3a32acac15fe1967bc3986b2a6347dffc965602354ea6f450ad07e8bfd253583"
 dependencies = [
  "alloc-no-stdlib",
  "alloc-stdlib",
+]
+
+[[package]]
+name = "btcx_api"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "bitcoin",
+ "hex",
+ "serde",
 ]
 
 [[package]]
